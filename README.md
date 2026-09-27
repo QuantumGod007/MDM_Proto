@@ -1,6 +1,6 @@
 # MDM_Proto — SIH26009 manganese planning prototype
 
-This repository contains the Person 3 production-forecasting component for the SIH26009 demo. The prototype demonstrates a one-week-ahead shortfall-planning workflow for the Dongri Buzurg study area. It is not a validated MOIL production model or a reserve-estimation system.
+This repository contains the production-forecasting component for the SIH26009 demo. The prototype demonstrates a one-week-ahead shortfall-planning workflow for the Dongri Buzurg study area. It is not a validated MOIL production model or a reserve-estimation system.
 
 ## Data boundary
 
