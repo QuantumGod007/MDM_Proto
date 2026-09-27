@@ -1,0 +1,74 @@
+{
+  "description": "Illustrative scenarios for fictional DEMO-01. Inputs and production are simulated; the holdout MAE is not MOIL accuracy.",
+  "inputs": {
+    "planned_tonnes": 1000,
+    "rainfall_mm_previous_week": 15,
+    "downtime_hours": 8,
+    "blast_delay_hours": 2,
+    "actual_tonnes_lag_1": 930,
+    "rolling_mean_4": 940
+  },
+  "forecast": {
+    "demo_site_id": "DEMO-01",
+    "random_forest_forecast_tonnes": 948.9,
+    "four_week_average_forecast_tonnes": 940.0,
+    "planned_tonnes": 1000.0,
+    "rf_gap_tonnes": 51.1,
+    "rf_shortfall_pct": 5.11,
+    "rf_risk_band": "medium",
+    "baseline_gap_tonnes": 60.0,
+    "baseline_shortfall_pct": 6.0,
+    "baseline_risk_band": "medium",
+    "risk_inputs": {
+      "planned_tonnes": 1000.0,
+      "rainfall_mm_previous_week": 15.0,
+      "downtime_hours": 8.0,
+      "equipment_available_pct": 95.23809523809524,
+      "blast_delay_hours": 2.0,
+      "actual_tonnes_lag_1": 930.0,
+      "rolling_mean_4": 940.0
+    },
+    "input_range_warnings": [],
+    "holdout_random_forest_mae_tonnes": 25.89,
+    "holdout_four_week_average_mae_tonnes": 36.16,
+    "holdout_evaluation_scope": "simulated chronological holdout 2024-03-18 through 2024-12-23",
+    "data_status": "simulated_demo_model"
+  },
+  "scenario_example": {
+    "scenario_name": "Reduce assumed downtime from 8 to 4 hours and blast delay from 2 to 1 hour",
+    "inputs": {
+      "planned_tonnes": 1000,
+      "rainfall_mm_previous_week": 15,
+      "downtime_hours": 4,
+      "blast_delay_hours": 1,
+      "actual_tonnes_lag_1": 930,
+      "rolling_mean_4": 940
+    },
+    "forecast": {
+      "demo_site_id": "DEMO-01",
+      "random_forest_forecast_tonnes": 956.92,
+      "four_week_average_forecast_tonnes": 940.0,
+      "planned_tonnes": 1000.0,
+      "rf_gap_tonnes": 43.08,
+      "rf_shortfall_pct": 4.31,
+      "rf_risk_band": "low",
+      "baseline_gap_tonnes": 60.0,
+      "baseline_shortfall_pct": 6.0,
+      "baseline_risk_band": "medium",
+      "risk_inputs": {
+        "planned_tonnes": 1000.0,
+        "rainfall_mm_previous_week": 15.0,
+        "downtime_hours": 4.0,
+        "equipment_available_pct": 97.61904761904762,
+        "blast_delay_hours": 1.0,
+        "actual_tonnes_lag_1": 930.0,
+        "rolling_mean_4": 940.0
+      },
+      "input_range_warnings": [],
+      "holdout_random_forest_mae_tonnes": 25.89,
+      "holdout_four_week_average_mae_tonnes": 36.16,
+      "holdout_evaluation_scope": "simulated chronological holdout 2024-03-18 through 2024-12-23",
+      "data_status": "simulated_demo_model"
+    }
+  }
+}

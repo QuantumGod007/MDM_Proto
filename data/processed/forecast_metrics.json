@@ -1,0 +1,71 @@
+{
+  "target": "simulated actual_tonnes",
+  "train_rows": 163,
+  "holdout_rows": 41,
+  "train_start": "2021-02-01",
+  "train_end": "2024-03-11",
+  "holdout_start": "2024-03-18",
+  "holdout_end": "2024-12-23",
+  "split": "chronological 80/20; no shuffling",
+  "evaluation_method": "fixed-model rolling one-week-ahead chronological holdout; each prior simulated actual is available for the next week's lag features",
+  "random_forest_mae_tonnes": 25.89,
+  "four_week_average_mae_tonnes": 36.16,
+  "features": [
+    "planned_tonnes",
+    "rainfall_mm_previous_week",
+    "downtime_hours",
+    "equipment_available_pct",
+    "blast_delay_hours",
+    "actual_tonnes_lag_1",
+    "rolling_mean_4"
+  ],
+  "feature_importances": {
+    "planned_tonnes": 0.2219,
+    "rainfall_mm_previous_week": 0.4262,
+    "downtime_hours": 0.0653,
+    "equipment_available_pct": 0.0601,
+    "blast_delay_hours": 0.1654,
+    "actual_tonnes_lag_1": 0.0408,
+    "rolling_mean_4": 0.0203
+  },
+  "feature_importances_scope": "final serving model fit on all usable simulated rows; descriptive only, not causal",
+  "serving_model_training_rows": 204,
+  "serving_model_train_start": "2021-02-01",
+  "serving_model_train_end": "2024-12-23",
+  "serving_model_fit_scope": "all usable simulated rows, refit after holdout evaluation",
+  "training_feature_ranges": {
+    "planned_tonnes": {
+      "min": 963.42,
+      "max": 1050.85
+    },
+    "rainfall_mm_previous_week": {
+      "min": 0.0,
+      "max": 274.26
+    },
+    "downtime_hours": {
+      "min": 0.69,
+      "max": 27.82
+    },
+    "equipment_available_pct": {
+      "min": 83.44,
+      "max": 99.59
+    },
+    "blast_delay_hours": {
+      "min": 0.21,
+      "max": 8.49
+    },
+    "actual_tonnes_lag_1": {
+      "min": 732.41,
+      "max": 989.34
+    },
+    "rolling_mean_4": {
+      "min": 795.81,
+      "max": 963.68
+    }
+  },
+  "scikit_learn_version": "1.9.1",
+  "joblib_version": "1.6.0",
+  "python_version": "3.13.2",
+  "random_seed": 26009,
+  "interpretation": "Scores measure performance on simulated holdout rows only; they are not validated against MOIL production."
+}
